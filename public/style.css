@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2a3d59;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+.new-user {
+  background: #425e88;
+  padding: 40px 40px;
+  max-width: 400px;
+  margin: 80px auto;
+  border-radius: 3px;
+  box-shadow: 3px 3px 0 rgb(0, 0, 0, 0.1);
+}
+
+.text-header h1 {
+  color: white;
+  font-weight: 100;
+  font-size: 75px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+h2 {
+  color: white;
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+}
+
+h3 {
+  color: white;
+  font-weight: 500;
+  align-items: center;
+  font-size: 25px;
+}
+
+label,
+input {
+  display: block;
+  margin: 18px 0;
+}
+
+label {
+  color: white;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: solid 1px #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.new-user .createUser input[type="submit"] {
+  margin: 24px;
+  font-size: 18px;
+  background: #2a3d59;
+  color: #ffffff;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* TODO - LIST PAGE */
+
+.form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#add-task {
+  /* width: 75%; */
+  /* margin-right: 0; */
+  padding: 10px;
+  color: white;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+  background: #2a3d59;
+  padding: 10px 20px;
+  border-radius: 0px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  outline: none;
+  max-width: 500px;
+  margin: 80px 0;
+  border-bottom: solid white;
+  border-width: thin;
+}
+
+.form-container .form input[type="submit"] {
+  background: #2a3d59;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  font-size: 35px;
+}
+
+.addBtn:hover {
+  color: #8eaedf;
+}
+
+.checkedBtn {
+  width: 25%;
+  padding: 10px;
+  margin-left: 0;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* TODO LISTAN  */
+
+/* NY 2 */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 500px; */
+  /* background-color: red; */
+}
+
+.todos {
+  margin-bottom: 50px;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  padding: 10px 20px;
+  font-size: 25px;
+  
+}
+
+li input[type="checkbox"] {
+  padding-right: 10px;
+  transform: scale(1.8);
+  vertical-align: top;
+  margin-top: 25px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+li label:hover {
+  color: #8eaedf;
+  cursor: pointer;
+}
+
+/* When clicked on, add a background color and strike out text */
+li label.checked {
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* li label.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} */
+
+/* Style trash buttons */
+.trashBtn {
+  background-color: #2a3d59;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.far {
+  background-color: #2a3d59;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  /* vertical-align: top; */
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.far:hover {
+  color: #8eaedf;
+}
+
+/* NY 1 */
+
+/* .todolist {
+  width: 100%;
+  max-width: 300px;
+}
+
+.do {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.todolist .do input[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.todolist .do label {
+  position: relative;
+  display: block;
+  padding: 0.75em 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.todolist .do label:hover {
+  transform: translateX(-1em);
+}
+
+.todolist .do label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 30%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.todolist .do label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.todolist .do label:hover::after {
+  width: 5px;
+}
+
+
+.todolist .do label .fa-check {
+  position: absolute;
+  left: 0.7em;
+  top: 0.25em;
+  font-size: 1.7em;
+  color: #74a6f1;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.todolist .do input[type="checkbox"]:checked + label .fa-check {
+  opacity: 1;
+}
+
+.todolist .do label .label {
+  position: absolute;
+  font-size: 25px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.todolist .do input[type="checkbox"]:checked + label .label {
+  color: #74a6f1;
+}
+
+.todolist .do label .label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 50%;
+  height: 1px;
+  background: #74a6f1;
+  transition: 0.3s ease-in-out;
+}
+
+.todolist .do input[type="checkbox"]:checked + label .label::after {
+  right: 0;
+} */
+/* GAMMAL */
+/* ul li {
+  
+  text-align: center;
+  color: white;
+  font-weight: 200;
+
+  font-size: 25px;
+  cursor: pointer;
+  
+}
+
+ul li:hover {
+  color: #8eaedf;
+}
+
+.far {
+  background-color: #2a3d59;
+  
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.far:hover {
+  color: #8eaedf;
+}
+
+.checked {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Stike out when clicked on */
+/* ul li label.checked {
+  color: #8eaedf;
+  text-decoration: line-through;
+} */
+
+/* Checked when clicked on */
+/* ul li label.checked::before {
+  content: "";
+  margin-right: 20px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} */
+
+/* FOOTER */
+
+h4 {
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+h5 {
+  color: white;
+  font-weight: 100;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer {
+  border-top: solid white;
+  border-width: thin;
+}
