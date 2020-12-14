@@ -32,6 +32,7 @@ h2 {
   font-weight: 100;
   font-size: 30px;
   text-align: center;
+  margin-top: 20px;
 }
 
 h3 {
@@ -71,6 +72,12 @@ input[type="email"] {
   cursor: pointer;
 }
 
+p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 /* TODO - LIST PAGE */
 
 .form {
@@ -96,7 +103,7 @@ input[type="email"] {
   border-left-style: hidden;
   outline: none;
   max-width: 500px;
-  margin: 80px 0;
+  margin: 100px 0;
   border-bottom: solid white;
   border-width: thin;
 }
@@ -104,7 +111,7 @@ input[type="email"] {
 .form-container .form input[type="submit"] {
   background: #2a3d59;
   color: white;
-  cursor: pointer;
+
   transition: 0.3s;
   border: none;
   font-size: 35px;
@@ -112,6 +119,7 @@ input[type="email"] {
 
 .addBtn:hover {
   color: #8eaedf;
+  cursor: pointer;
 }
 
 .checkedBtn {
@@ -148,7 +156,6 @@ li {
   justify-content: left;
   padding: 10px 20px;
   font-size: 25px;
-  
 }
 
 li input[type="checkbox"] {
@@ -201,8 +208,9 @@ li label.checked {
   top: 0;
   padding: 12px 16px 12px 16px;
   /* vertical-align: top; */
-  margin-top: 10px;
-  margin-left: 40px;
+  /* margin-top: 5px; */
+
+  margin-left: 30px;
 }
 
 .far:hover {

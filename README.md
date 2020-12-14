@@ -43,17 +43,20 @@ todolist
 - skapa tabell för todos:
   CREATE TABLE todos (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO INCREMENT, 
-  user_id INT NOT NULL,
+  user_id INT NOT NULL FOREIGN KEY,
   text VARCHAR(255) NOT NULL
-  done INT NOT NULL,
+  done BIT(1) [b'0'] NOT NULL,
 )
 
 - skapa usertabell
   CREATE TABLE users (
   id INT UNSIGNED NOT NULL AUTO INCREMENT, 
-  username VARCHAR(255) NOT NULL FOREIGN KEY,
+  username VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
 ) 
+
+- Add Foreign key:
+ALTER TABLE todos ADD FOREIGN KEY (user_id) REFERENCES users(id);
 
 ##### PHP
 - skapa ett sign-in/create user formulär HTML & CSS (action htmlspecialchars($_SERVER['PHP_SELF'])

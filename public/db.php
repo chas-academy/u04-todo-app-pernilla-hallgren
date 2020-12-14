@@ -2,28 +2,6 @@
 
 // Här skapar vi en funktion med datbas kopplingen som vi sedan kan kalla på i index.php/todolist.php
 
-
-// $host = 'localhost';
-// $db = 'todolist';
-// $user = 'root';
-// $pass = 'root';
-
-// try {
-//     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-//     // set the PDO error mode to exception
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//     echo "Connected successfully";
-// } catch (PDOException $e) {
-//     echo "Connection failed: " . $e->getMessage();
-// }
-
-// $sql = "INSERT INTO todos (user_id, text, done) VALUES (?,?,?) ";
-// $stmt = $conn->prepare($sql);
-// $stmt->execute([2, 'diska', 0]);
-
-
-
-
 function connectDB()
 {
     // koppla upp oss till db: todolist med PDO
