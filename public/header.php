@@ -18,12 +18,12 @@
     <header class="text-header">
         <h1>GET SH#T DONE!</h1>
         <h2>Time to get organized!</h2>
-        <!-- <?php
+        <?php
             if (isset($_POST['submit'])) {
                 $username = ($_POST['username']);
                 $email = ($_POST['email']);
             }
         ?>
-        <h2><?php echo $username; ?>'s TO-DO LIST!</h2> -->
+        <h2><?php echo $username; ?>'s TO-DO LIST!</h2>
     </header>
   

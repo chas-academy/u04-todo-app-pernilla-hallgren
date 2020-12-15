@@ -1,6 +1,30 @@
 <?php
 
 include_once 'header.php';
+require_once 'db.php';
+session_start();
+// KOlla om SESSION är set
+// if(isset($_SESSION['id'])) {
+//     echo $_SESSION['id'];
+// }
+$pdo = connectDB();
+
+// // DELETE FROM TODOLIST
+if (isset($_POST['id'])) {
+    // var_dump($_POST);
+    $id = $_POST['id'];
+    $deleteQuery = "DELETE FROM todos WHERE id = :id";
+    $stmt = $pdo->prepare($deleteQuery);
+    if ($stmt->execute(['id' => $id])) {
+        echo "It worked!";
+    }
+}
+
+// SELECT TEXT FROM TODO-list
+$sql = "SELECT * FROM todos WHERE user_id = '".$_SESSION['id']."'";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['user_id' => $_SESSION['id']]);
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>   
 <main>
@@ -19,12 +43,20 @@ include_once 'header.php';
     <section class="container">
         <div class="todos">
             <ul class="myList">
-                
-                    <?php
-if(isset($_POST['submit'])) {
-  echo ($_POST['text']);
-}
-?>               
+                    <!-- query for all the tasks -->
+                    <?php foreach ($results as $row) { ?>
+                            <li> 
+                                <input type="checkbox" id="one"/>
+                                <label for="one" ><?php echo htmlentities($row['text']) . "<br>"; ?></label>
+                                <form action="#" method="POST">
+                                    <button value="submit" class="trashBtn" type="submit" name="delete"><i class="far fa-trash-alt"></i></button>
+                                    <?php echo("<input type='hidden' name='id' value='".$row['id']."'/>"); ?>
+
+                                </form>
+                            </li>    
+                        <?php } ?>
+                        
+             
                     <!-- <li>       
                         <input type="checkbox" id="one"/>
                         <label for="one" class="checked">By new sweatshirt</label>

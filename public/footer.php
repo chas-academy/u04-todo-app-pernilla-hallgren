@@ -7,6 +7,7 @@
             <h5>By Pernilla Hällgren</h5>
         </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
 

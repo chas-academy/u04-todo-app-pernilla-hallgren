@@ -59,14 +59,17 @@ function createUser($username, $email)
     $stmt->execute(['username' => $username, 'email' => $email]);
 }
 
-function createTodo($user_id, $text, $done)
+
+function createTodo($user_id, $text) 
 {
     $pdo = connectDB();
-    $sql = "INSERT INTO todos (user_id, text, done) VALUES (:user_id, :text, :done)";
+    $sql = "INSERT INTO todos (user_id, text) VALUES (:user_id, :text)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['user_id' => $user_id, 'text' => $text, 'done' => 0]);
-    // $stmt->execute(['user_id' => $user_id, 'text' => $text, 'done' => 0]);
+    $stmt->execute(['user_id' => $user_id, 'text' => $text]);
 }
 
 
+function printTodoItems()
+{
 
+}

@@ -178,7 +178,7 @@ li label.checked {
   text-decoration: line-through;
 }
 
-/* li label.checked::before {
+li label.checked::before {
   content: "";
   position: absolute;
   border-color: #fff;
@@ -189,7 +189,7 @@ li label.checked {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-} */
+}
 
 /* Style trash buttons */
 .trashBtn {
