@@ -59,6 +59,7 @@ input[type="email"] {
   border-radius: 10px;
   width: 100%;
   outline: none;
+  outline: none;
 }
 
 .new-user .createUser input[type="submit"] {
@@ -70,6 +71,7 @@ input[type="email"] {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  outline: none;
 }
 
 p {
@@ -111,7 +113,7 @@ p {
 .form-container .form input[type="submit"] {
   background: #2a3d59;
   color: white;
-
+  outline: none;
   transition: 0.3s;
   border: none;
   font-size: 35px;
@@ -158,27 +160,57 @@ li {
   font-size: 25px;
 }
 
-li input[type="checkbox"] {
+li button {
+  border: none;
+  background-color: #2a3d59;
+  cursor: pointer;
+  outline: none;
+}
+
+.circleBtn {
+  padding-right: 10px;
+  margin-right: 100px;
+  margin-top: 10px;
+}
+
+/* li input[type="checkbox"] {
   padding-right: 10px;
   transform: scale(1.8);
   vertical-align: top;
   margin-top: 25px;
   margin-right: 40px;
   cursor: pointer;
-}
+} */
 
 li label:hover {
   color: #8eaedf;
   cursor: pointer;
 }
+/* 
+input[id="line"] {
+  display: none;
+}
+
+input[id="line"]:checked ~ label {
+  text-decoration: line-through;
+  color: white;
+} */
+
+/* label {
+  border: thin solid darkgray;
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 5px;
+} */
 
 /* When clicked on, add a background color and strike out text */
-li label.checked {
+.checked {
   color: #fff;
   text-decoration: line-through;
 }
 
-li label.checked::before {
+/* li label.checked {
   content: "";
   position: absolute;
   border-color: #fff;
@@ -189,12 +221,12 @@ li label.checked::before {
   transform: rotate(45deg);
   height: 15px;
   width: 7px;
-}
+} */
 
 /* Style trash buttons */
 .trashBtn {
-  background-color: #2a3d59;
-  border: none;
+  margin-left: 80px;
+  margin-bottom: 9px;
   padding: 12px 16px;
   cursor: pointer;
 }
@@ -207,8 +239,7 @@ li label.checked::before {
   right: 0;
   top: 0;
   padding: 12px 16px 12px 16px;
-  /* vertical-align: top; */
-  /* margin-top: 5px; */
+  vertical-align: top;
 
   margin-left: 30px;
 }
