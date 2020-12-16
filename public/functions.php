@@ -39,16 +39,6 @@ function invalidEmail($email)
     return $result;
 }
 
-// Kolla så att användarnamnet eller email inte redan existerar i databasen
-// function usernameExists($pdo, $username, $email)
-// {
-//    $sql = "SELECT * FROM users WHERE username = ? OR email = ?;";
-//    // första ; stänger sql statement andra för att stänga php koden
-// //    $stmt = mysqli_stmt_init($pdo); // enl intruktionen från tutorialen
-//    $stmt = $pdo->prepare($sql);
-//    $stmt->execute()
-    
-// }
 
 // skapa en användare när användaren signar in
 function createUser($username, $email)
@@ -69,7 +59,20 @@ function createTodo($user_id, $text)
 }
 
 
-function printTodoItems()
+// Funktion som DELETE FROM TODOLIST when click on button
+function deleteTodoItem() 
 {
 
+}
+
+// UPDATE DATABASE DONE = 1
+function updateTodoList()
+{
+
+}
+
+// SELECT TEXT FROM TODO-list user-session and print out
+function printTodoItems()
+{
+    
 }

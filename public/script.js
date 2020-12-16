@@ -8,7 +8,7 @@
 //   }
 // }, false);
 
-
+// FUNKAR
 let checkedBtn = document.querySelector('button');
 checkedBtn.addEventListener('click', changeColor);
 
@@ -17,7 +17,3 @@ function changeColor() {
   text.classList.add('checked');
 }
 
-// const checkedBtn = document.querySelector('#done');
-// checkedBtn.addEventListener('click', (event) => {        
-//   event.target.className = 'checked';
-// }); 

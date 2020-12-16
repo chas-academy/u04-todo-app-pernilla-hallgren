@@ -10,6 +10,8 @@ body {
   font-weight: 100;
 }
 
+/* CREATE NEW USER STARTS*/
+
 .new-user {
   background: #425e88;
   padding: 40px 40px;
@@ -79,8 +81,9 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+/* CREATE NEW ENDS */
 
-/* TODO - LIST PAGE */
+/* TODO - LIST PAGE STARTS */
 
 .form {
   display: flex;
@@ -133,9 +136,7 @@ p {
   transition: 0.3s;
 }
 
-/* TODO LISTAN  */
-
-/* NY 2 */
+/* THE ITEMS LIST */
 
 .container {
   display: flex;
@@ -170,58 +171,76 @@ li button {
 .circleBtn {
   padding-right: 10px;
   margin-right: 100px;
-  margin-top: 10px;
+  margin-top: 20px;
+  /* nytt */
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
-/* li input[type="checkbox"] {
+li button .fa-check {
+  font-size: 23px;
+  /* color: #74a6f1; */
+  color: white;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + button .fa-check {
+  opacity: 1;
+}
+
+/* Vet ej vad denna göra 
+/* label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 50%;
+  height: 1px;
+  background: #74a6f1;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked + label::after {
+  right: 0;
+} */
+
+/* checkboks above text, label */
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+li input[type="checkbox"] {
   padding-right: 10px;
   transform: scale(1.8);
   vertical-align: top;
   margin-top: 25px;
   margin-right: 40px;
   cursor: pointer;
-} */
+}
+
+/* TEXT MOVING WHEN HOVER */ 
+li label {
+  transition: 0.3s ease-in-out;
+}
 
 li label:hover {
   color: #8eaedf;
   cursor: pointer;
-}
-/* 
-input[id="line"] {
-  display: none;
+  transform: translateX(-1em);
 }
 
-input[id="line"]:checked ~ label {
-  text-decoration: line-through;
-  color: white;
-} */
-
-/* label {
-  border: thin solid darkgray;
-  border-radius: 5px;
-  padding: 10px;
-  display: inline-block;
-  margin-top: 5px;
-} */
 
 /* When clicked on, add a background color and strike out text */
 .checked {
   color: #fff;
   text-decoration: line-through;
 }
-
-/* li label.checked {
-  content: "";
-  position: absolute;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-} */
 
 /* Style trash buttons */
 .trashBtn {
@@ -404,6 +423,8 @@ ul li:hover {
   height: 15px;
   width: 7px;
 } */
+
+/* TODO - LIST PAGE STARTS */
 
 /* FOOTER */
 

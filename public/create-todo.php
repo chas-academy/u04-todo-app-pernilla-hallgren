@@ -45,11 +45,11 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($results as $row) { ?>
                         <li> 
                             <form action="create-todo.php" method="POST">
-                                <button id="done" value="submit" class="circleBtn" type="submit" name="done"><i id="done" class="far fa-circle"></i></button>
+                                <button id="done" value="submit" class="circleBtn" type="submit" name="done"><i class="fas fa-check"></i></button>
                                 <?php echo("<input type='hidden' name='done' value='".$row['id']."'/>"); ?>
                             </form>
                     
-                            <!-- <input  name="line" type="checkbox" id="line"> -->
+                            <input type="checkbox" id="do1">
                             <label id="labelText" ><?php echo htmlentities($row['text']) . "<br>"; ?></label>
 
                             <form action="create-todo.php" method="POST">
