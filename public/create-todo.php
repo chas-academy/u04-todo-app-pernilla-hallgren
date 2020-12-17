@@ -19,7 +19,9 @@ if (isset($_POST['done'])) {
     $id = $_POST['done'];
     $updateQuery = "UPDATE todos SET done = 1 WHERE id = :id";
     $stmt = $pdo->prepare($updateQuery);
-    $stmt->execute(['id' => $id]);
+    if ($stmt->execute(['id' => $id])) {
+        echo "Task $id is done! <br>";
+    }
 }
 
 // SELECT TEXT FROM TODO-list user-session and print out
@@ -44,12 +46,14 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <!-- ITEMS TODO PRINTED OUT ON WEBPAGE -->
                 <?php foreach ($results as $row) { ?>
                         <li> 
-                            <form action="create-todo.php" method="POST">
+                            <form action="" method="POST">
                                 <button id="done" value="submit" class="circleBtn" type="submit" name="done"><i class="fas fa-check"></i></button>
                                 <?php echo("<input type='hidden' name='done' value='".$row['id']."'/>"); ?>
                             </form>
-                    
-                            <input type="checkbox" id="do1">
+                                    
+                <!-- <span>&#10003;</span> -->
+                
+                            <!-- <input type="checkbox" id="do1"> -->
                             <label id="labelText" ><?php echo htmlentities($row['text']) . "<br>"; ?></label>
 
                             <form action="create-todo.php" method="POST">

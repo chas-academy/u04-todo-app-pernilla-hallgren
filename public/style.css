@@ -184,8 +184,7 @@ li button {
 
 li button .fa-check {
   font-size: 23px;
-  /* color: #74a6f1; */
-  color: white;
+  color: #74a6f1;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
@@ -194,7 +193,7 @@ input[type="checkbox"]:checked + button .fa-check {
   opacity: 1;
 }
 
-/* Vet ej vad denna göra 
+/* Vet ej vad denna göra */
 /* label::after {
   content: "";
   position: absolute;
@@ -208,10 +207,10 @@ input[type="checkbox"]:checked + button .fa-check {
 
 input[type="checkbox"]:checked + label::after {
   right: 0;
-} */
+}  */
 
-/* checkboks above text, label */
-input[type="checkbox"] {
+/* checkbox above text, label */
+/* input[type="checkbox"] {
   visibility: hidden;
 }
 
@@ -222,9 +221,9 @@ li input[type="checkbox"] {
   margin-top: 25px;
   margin-right: 40px;
   cursor: pointer;
-}
+} */
 
-/* TEXT MOVING WHEN HOVER */ 
+/* TEXT MOVING WHEN HOVER */
 li label {
   transition: 0.3s ease-in-out;
 }
@@ -235,10 +234,9 @@ li label:hover {
   transform: translateX(-1em);
 }
 
-
 /* When clicked on, add a background color and strike out text */
 .checked {
-  color: #fff;
+  color: #8eaedf;
   text-decoration: line-through;
 }
 

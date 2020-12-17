@@ -38,17 +38,22 @@
 ##### SQL
 - skapa databas todolist
 
-todolist
+Todos
 
 - skapa tabell för todos:
+
   CREATE TABLE todos (
   id INT UNSIGNED NOT NULL PRIMARY KEY AUTO INCREMENT, 
   user_id INT NOT NULL FOREIGN KEY,
-  text VARCHAR(255) NOT NULL
-  done BIT(1) [b'0'] NOT NULL,
+  titel VARCHAR(255) NOT NULL,
+  text VARCHAR(255) NOT NULL,
+  done BIT(1) NOT NULL DEAFAULT 0
 )
 
+Users
+
 - skapa usertabell
+
   CREATE TABLE users (
   id INT UNSIGNED NOT NULL AUTO INCREMENT, 
   username VARCHAR(255) NOT NULL,
@@ -58,7 +63,7 @@ todolist
 - Add Foreign key:
 ALTER TABLE todos ADD FOREIGN KEY (user_id) REFERENCES users(id);
 
-##### PHP
+##### HTML, CSS & PHP
 - skapa ett sign-in/create user formulär HTML & CSS (action htmlspecialchars($_SERVER['PHP_SELF'])
 - skapa en todo-lista HTML & CSS
 - skapa en funktion som connectar till databasen
@@ -88,7 +93,4 @@ if ($stmnt->execute(["titel"=>$titel, "text"=>$text])) {
 - save & delete button är submit buttons
 - funktion för att ta bort todos från databas
 
-## Överkurs
-session_start
-password hash
-password_verify
+
