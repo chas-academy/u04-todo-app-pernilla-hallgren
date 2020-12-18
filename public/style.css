@@ -10,8 +10,7 @@ body {
   font-weight: 100;
 }
 
-/* CREATE NEW USER STARTS*/
-
+/* CREATE NEW USER START */
 .new-user {
   background: #425e88;
   padding: 40px 40px;
@@ -81,9 +80,24 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-/* CREATE NEW ENDS */
+/* CREATE NEW USER ENDS */
 
-/* TODO - LIST PAGE STARTS */
+/* TODO-LIST START */
+.newUser {
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: #8eaedf;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #ffffff;
+}
 
 .form {
   display: flex;
@@ -92,8 +106,6 @@ p {
 }
 
 #add-task {
-  /* width: 75%; */
-  /* margin-right: 0; */
   padding: 10px;
   color: white;
   font-size: 25px;
@@ -136,16 +148,12 @@ p {
   transition: 0.3s;
 }
 
-/* THE ITEMS LIST */
-
 .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  /* max-width: 500px; */
-  /* background-color: red; */
 }
 
 .todos {
@@ -172,7 +180,6 @@ li button {
   padding-right: 10px;
   margin-right: 100px;
   margin-top: 20px;
-  /* nytt */
   content: "";
   display: inline-block;
   width: 24px;
@@ -185,7 +192,6 @@ li button {
 li button .fa-check {
   font-size: 23px;
   color: #74a6f1;
-  opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
@@ -193,37 +199,6 @@ input[type="checkbox"]:checked + button .fa-check {
   opacity: 1;
 }
 
-/* Vet ej vad denna göra */
-/* label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  top: 50%;
-  height: 1px;
-  background: #74a6f1;
-  transition: 0.3s ease-in-out;
-}
-
-input[type="checkbox"]:checked + label::after {
-  right: 0;
-}  */
-
-/* checkbox above text, label */
-/* input[type="checkbox"] {
-  visibility: hidden;
-}
-
-li input[type="checkbox"] {
-  padding-right: 10px;
-  transform: scale(1.8);
-  vertical-align: top;
-  margin-top: 25px;
-  margin-right: 40px;
-  cursor: pointer;
-} */
-
-/* TEXT MOVING WHEN HOVER */
 li label {
   transition: 0.3s ease-in-out;
 }
@@ -234,13 +209,11 @@ li label:hover {
   transform: translateX(-1em);
 }
 
-/* When clicked on, add a background color and strike out text */
 .checked {
   color: #8eaedf;
   text-decoration: line-through;
 }
 
-/* Style trash buttons */
 .trashBtn {
   margin-left: 80px;
   margin-bottom: 9px;
@@ -257,175 +230,15 @@ li label:hover {
   top: 0;
   padding: 12px 16px 12px 16px;
   vertical-align: top;
-
   margin-left: 30px;
 }
 
 .far:hover {
   color: #8eaedf;
 }
+/* TODO-LIST ENDS */
 
-/* NY 1 */
-
-/* .todolist {
-  width: 100%;
-  max-width: 300px;
-}
-
-.do {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.todolist .do input[type="checkbox"] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.todolist .do label {
-  position: relative;
-  display: block;
-  padding: 0.75em 1em;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.todolist .do label:hover {
-  transform: translateX(-1em);
-}
-
-.todolist .do label::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: 1px solid white;
-  border-radius: 30%;
-  vertical-align: middle;
-  margin-right: 0.5em;
-}
-
-.todolist .do label::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  transition: 0.3s ease-in-out;
-}
-
-.todolist .do label:hover::after {
-  width: 5px;
-}
-
-
-.todolist .do label .fa-check {
-  position: absolute;
-  left: 0.7em;
-  top: 0.25em;
-  font-size: 1.7em;
-  color: #74a6f1;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-
-.todolist .do input[type="checkbox"]:checked + label .fa-check {
-  opacity: 1;
-}
-
-.todolist .do label .label {
-  position: absolute;
-  font-size: 25px;
-  color: white;
-  transition: 0.3s ease-in-out;
-}
-
-.todolist .do input[type="checkbox"]:checked + label .label {
-  color: #74a6f1;
-}
-
-.todolist .do label .label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  top: 50%;
-  height: 1px;
-  background: #74a6f1;
-  transition: 0.3s ease-in-out;
-}
-
-.todolist .do input[type="checkbox"]:checked + label .label::after {
-  right: 0;
-} */
-/* GAMMAL */
-/* ul li {
-  
-  text-align: center;
-  color: white;
-  font-weight: 200;
-
-  font-size: 25px;
-  cursor: pointer;
-  
-}
-
-ul li:hover {
-  color: #8eaedf;
-}
-
-.far {
-  background-color: #2a3d59;
-  
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
-}
-
-.far:hover {
-  color: #8eaedf;
-}
-
-.checked {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* Stike out when clicked on */
-/* ul li label.checked {
-  color: #8eaedf;
-  text-decoration: line-through;
-} */
-
-/* Checked when clicked on */
-/* ul li label.checked::before {
-  content: "";
-  margin-right: 20px;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0 2px 2px 0;
-  top: 10px;
-  left: 16px;
-  transform: rotate(45deg);
-  height: 15px;
-  width: 7px;
-} */
-
-/* TODO - LIST PAGE STARTS */
-
-/* FOOTER */
-
+/* FOOTER START */
 h4 {
   color: white;
   font-weight: 100;
@@ -446,3 +259,4 @@ h5 {
   border-top: solid white;
   border-width: thin;
 }
+/* FOOTER ENDS */

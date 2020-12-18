@@ -34,63 +34,41 @@
 - Versionshantering med Git (inte en commit på slutet av uppgiften, utan regelbundna commits med kommentarer kring vad som implementerats)
 
 #### ROAD MAP
-
 ##### SQL
-- skapa databas todolist
+- skapa databas som heter todolist som har två tabeller todos och users
 
 Todos
 
 - skapa tabell för todos:
-
-  CREATE TABLE todos (
-  id INT UNSIGNED NOT NULL PRIMARY KEY AUTO INCREMENT, 
-  user_id INT NOT NULL FOREIGN KEY,
-  titel VARCHAR(255) NOT NULL,
-  text VARCHAR(255) NOT NULL,
-  done BIT(1) NOT NULL DEAFAULT 0
-)
+CREATE TABLE `todos` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  `done` bit(1) NOT NULL DEFAULT b'0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `todos_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) 
 
 Users
 
-- skapa usertabell
-
-  CREATE TABLE users (
-  id INT UNSIGNED NOT NULL AUTO INCREMENT, 
-  username VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
+- skapa users tabell:
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
 ) 
+##### HTML, CSS 
+- designa och skapa ett sign-in/create user formulär och ett todolist formulär med HTML & CSS 
 
-- Add Foreign key:
-ALTER TABLE todos ADD FOREIGN KEY (user_id) REFERENCES users(id);
+##### PHP
+- skapa en funktion som kopplar till databasen med PDO
+- skapa funktioner för databas kopplingen med CRUD: 
+- CREATE (insert) - lägg till uppgift i databasen när användaren skriver in i formuläret
+- READ (select) - hämta uppgift från databasen när användaren sparat och skriv ut så användaren ser
+- UPDATE - uppdatera databasen när användaren markerar att en uppgift är klar
+- DELETE - deletea en uppgift från databasen när användaren trycker på delete-knappen och ta bort från användar sidan
 
-##### HTML, CSS & PHP
-- skapa ett sign-in/create user formulär HTML & CSS (action htmlspecialchars($_SERVER['PHP_SELF'])
-- skapa en todo-lista HTML & CSS
-- skapa en funktion som connectar till databasen
-- koppla databas med pdo
-- CRUD testa databas-connection 
-- CREATE - INSERT
-- READ - SELECT
-- UPDATE - UPDATE
-- DELETE - DELETE
-
-- INSERTA I DATASEN:
-$query = "INSERT INTO tabellen (titel, text) VALUES (:titel, :text)"";
-$stmnt = $pdo->prepare($query);
-$stmnt->execute(["titel"=>$titel, "text"=>$text]);
-if ($stmnt->execute(["titel"=>$titel, "text"=>$text])) {
-    ...code
-};
-
-- HÄMTA ALLA UPPGIFTER FRÅN DATABASEN OCH SKRIVA UT ALLA I BODY
-- lägg i body
-- använd echo
-- $query = "SELECT * FROM tabellen";
-- $result = pdo->query($query)->fetchAll()
-- var_dump($result) // för att se vad du får ut
-- foreach någonstans i en lista eller div
-- visa todos som lista eller form, med text som default value i input, id som gömt value med save & delete button
-- save & delete button är submit buttons
-- funktion för att ta bort todos från databas
 
 
