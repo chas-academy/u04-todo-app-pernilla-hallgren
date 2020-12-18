@@ -8,13 +8,13 @@ session_start();
 $pdo = connectDB();
 
 if (!isset($_SESSION['username'])) {
-    echo "<h2>Welcome to your TO-DO List!</h2>";   
+    echo "<h2>Welcome to your TO-DO List!</h2>";
 } else {
     $username = $_SESSION['username'];
     echo "<h2><strong>$username</strong>'s TO-DO LIST!</h2>";
 }
 
-// DELETE FROM TODOLIST when click on button
+// DELETE FROM DATABASE TODOS TABEL
 if (isset($_POST['id'])) {
     $id = $_POST['id'];
     $deleteQuery = "DELETE FROM todos WHERE id = :id";
@@ -22,7 +22,7 @@ if (isset($_POST['id'])) {
     $stmt->execute(['id' => $id]);
 }
 
-// UPDATE DATABASE DONE = 1
+// UPDATE DATABASE TODOS TABEL, DONE = 1
 if (isset($_POST['done'])) {
     $id = $_POST['done'];
     $updateQuery = "UPDATE todos SET done = 1 WHERE id = :id";
@@ -36,7 +36,7 @@ if (!isset($_SESSION['id'])) {
     header("create-user.php");
 }
 
-// SELECT TEXT FROM TODO-list user-session and print out
+// SELECT TEXT FROM TODOS TABEL
 $sql = "SELECT * FROM todos WHERE user_id = :user_id";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['user_id' => $_SESSION['id']]);
@@ -59,10 +59,9 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <section class="container">
         <div class="todos">
             <ul class="myList">
-                <!-- ITEMS TODO PRINTED OUT ON WEBPAGE -->
+                <!-- TODO ITEMS PRINTED OUT ON WEBPAGE -->
                 <?php if (isset($results)) {
     foreach ($results as $row) {
-       
         $checkSymbol = ($row['done'] == "1") ? "<i class='fas fa-check'></i>" : ""; ?>
                     <li> 
                         <form action="" method="POST">

@@ -37,8 +37,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['username'] = $stmt->fetch()['username'];  
     
     header("location: create-todo.php");
-
-    
+   
 } else {
     header("location: create-user.php");
 }

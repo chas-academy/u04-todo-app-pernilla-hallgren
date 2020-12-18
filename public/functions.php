@@ -1,10 +1,8 @@
 <?php
 
-// Kollar att alla input fält är ifyllda
 function emptyInput($username, $email)
 {
     $result;
-    // om dessa rutor är tomma..
     if (empty($username) || empty($email)) {
         $result = true;
     } else {
@@ -13,7 +11,6 @@ function emptyInput($username, $email)
     return $result;
 }
 
-// Kollar att användarnamnet är korrekt
 function invalidUsername($username)
 {
     $result;

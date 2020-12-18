@@ -59,16 +59,17 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) 
-##### HTML, CSS 
+##### HTML & CSS 
 - designa och skapa ett sign-in/create user formulär och ett todolist formulär med HTML & CSS 
-
+##### JavaScript
+- skapa en funktion som lyssnar på knapptryck på uppgiftstexten och stryker över den (ej kopplad till databasen)
 ##### PHP
 - skapa en funktion som kopplar till databasen med PDO
 - skapa funktioner för databas kopplingen med CRUD: 
 - CREATE (insert) - lägg till uppgift i databasen när användaren skriver in i formuläret
 - READ (select) - hämta uppgift från databasen när användaren sparat och skriv ut så användaren ser
-- UPDATE - uppdatera databasen när användaren markerar att en uppgift är klar
-- DELETE - deletea en uppgift från databasen när användaren trycker på delete-knappen och ta bort från användar sidan
+- UPDATE - uppdatera databasen när användaren markerar att en uppgift är klar 
+- DELETE - delete:a en uppgift från databasen när användaren trycker på delete-knappen 
 
 
 
