@@ -106,8 +106,6 @@ a:hover {
 }
 
 #add-task {
-  padding: 10px;
-  color: white;
   font-size: 25px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -260,3 +258,28 @@ h5 {
   border-width: thin;
 }
 /* FOOTER ENDS */
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  #add-task {
+    font-size: 20px;
+    padding: 10px 20px;
+    outline: none;
+    max-width: 300px;
+    margin: 100px 0;
+  }
+  form #done {
+    font-size: 10px;
+  }
+  li #labelText {
+    font-size: 20px;
+  }
+  li #done {
+    width: 15px;
+    height: 15px;
+    margin-right: 50px;
+  }
+  li form .trashBtn {
+    margin-left: 20px;
+  }
+}
