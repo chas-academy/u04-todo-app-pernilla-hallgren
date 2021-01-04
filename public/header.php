@@ -1,5 +1,4 @@
-
-
+<!-- HEADER -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +13,6 @@
 <body>  
     <header class="text-header">
         <h1>GET SH#T DONE!</h1>
-        <h2>Time to get organized!</h2>
-        
+        <h2>Time to get organized!</h2>  
     </header>
   

@@ -1,6 +1,4 @@
-<?php
-
-?>
+<!-- FOOTER -->
     <footer>
         <div class="footer">
             <h4>u04 TO-DO-APP Chasacademy Fullstack 2020</h4>

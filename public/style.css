@@ -80,7 +80,7 @@ p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
-/* CREATE NEW USER ENDS */
+/* ENDS CREATE NEW USER */
 
 /* TODO-LIST START */
 .newUser {
@@ -234,7 +234,7 @@ li label:hover {
 .far:hover {
   color: #8eaedf;
 }
-/* TODO-LIST ENDS */
+/* ENDS TODO-LIST */
 
 /* FOOTER START */
 h4 {
@@ -257,7 +257,7 @@ h5 {
   border-top: solid white;
   border-width: thin;
 }
-/* FOOTER ENDS */
+/* ENDS FOOTER */
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
